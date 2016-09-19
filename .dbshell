@@ -1,0 +1,4 @@
+show database
+show databases
+use edxapp
+show tables;

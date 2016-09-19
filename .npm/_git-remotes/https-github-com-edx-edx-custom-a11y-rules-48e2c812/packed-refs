@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled 
+97fd67506ca08825a752432b78f21278213ee451 refs/heads/clytwynec/initial-work
+04e209dceca66ca7dcb060a171f520c5a7b61c8a refs/heads/master
+04e209dceca66ca7dcb060a171f520c5a7b61c8a refs/heads/open-release/eucalyptus.master
+8633ea2fd04d84d69c4610bbfbf38db32ad005a9 refs/pull/1/head
+e426912c535fb5168c3c03faa42d15e349ae5531 refs/pull/2/head
+59f29ff442d9a80c2e5807e89748a86244c8ea01 refs/pull/3/head
+5142ea98f8f9de66e8536160889cd44fb99c6301 refs/pull/4/head
+04e209dceca66ca7dcb060a171f520c5a7b61c8a refs/tags/open-release/eucalyptus.1rc2
+04e209dceca66ca7dcb060a171f520c5a7b61c8a refs/tags/open-release/eucalyptus/1rc1
