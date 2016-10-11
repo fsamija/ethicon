@@ -1,40 +1,3 @@
-git checkout  -- lms/static/sass/_overrides.scss
-git checkout  -- lms/static/sass/lms-main-v1-rtl.scss
-git checkout  -- lms/static/sass/lms-main-v1.scss
-git checkout  -- lms/templates/footer.html
-git status
-git pull
-cd lms/static/sass/
-nano lms-main-v1
-nano lms-main-v1.scss 
-cd
-cd edx-platform/
-paver update_assets lms --settings=aws
-sass --update --cache-location /tmp/sass-cache --default-encoding utf-8 --style compressed --load-path . --load-path common/static --load-path common/static/sass --load-path lms/static/sass --load-path lms/static/themed_sass --load-path cms/static/sass --load-path common/static/sass --load-path lms/static/certificates/sass lms/static/sass:lms/static/css lms/static/themed_sass:lms/static/css cms/static/sass:cms/static/css common/static/sass:common/static/css lms/static/certificates/sass:lms/static/certificates/css
-nano +54 lms/static/themed_sass/lms-main.scss
-cd
-nano lms.env.json 
-exit
-source /edx/app/edxapp/edxapp_env
-cd edx-platform/
-paver update_assets lms --settings=aws
-sass --update --cache-location /tmp/sass-cache --default-encoding utf-8 --style compressed --load-path . --load-path common/static --load-path common/static/sass --load-path lms/static/sass --load-path lms/static/themed_sass --load-path cms/static/sass --load-path common/static/sass --load-path lms/static/certificates/sass lms/static/sass:lms/static/css lms/static/themed_sass:lms/static/css cms/static/sass:cms/static/css common/static/sass:common/static/css lms/static/certificates/sass:lms/static/certificates/css
-sass --update --cache-location /tmp/sass-cache --default-encoding utf-8 --style compressed  --load-path . --load-path common/static --load-path common/static/sass --load-path lms/static/sass --load-path lms/static/themed_sass --load-path cms/static/sass --load-path common/static/sass --load-path lms/static/certificates/sass lms/static/sass:lms/static/css lms/static/themed_sass:lms/static/css cms/static/sass:cms/static/css common/static/sass:common/static/css lms/static/certificates/sass:lms/static/certificates/css
-cd ..
-nano lms.env.json 
-cd edx-platform/
-paver update_assets lms --settings=aws
-sass --update --cache-location /tmp/sass-cache --default-encoding utf-8 --style compressed --load-path . --load-path common/static --load-path common/static/sass --load-path lms/static/sass --load-path lms/static/themed_sass --load-path cms/static/sass --load-path common/static/sass --load-path lms/static/certificates/sass lms/static/sass:lms/static/css lms/static/themed_sass:lms/static/css cms/static/sass:cms/static/css common/static/sass:common/static/css lms/static/certificates/sass:lms/static/certificates/css
-cd 
-cd themes/
-ls -l
-cd
-nano lms.env.json 
-exit
-source /edx/app/edxapp/edxapp_env
-cd edx-platform/
-paver update_assets lms --settings=aws
-cd
 cd themes/
 rm -rf custom-theme/
 ls
@@ -497,4 +460,41 @@ python /edx/app/edxapp/edx-platform/manage.py cms syncdb --settings=aws
 exit
 cd
 nano lms.env.json
+exit
+source /edx/app/edxapp/edxapp_env
+cd edx-platform/
+cd
+cd edx-platform/
+paver update_assets lms --settings=aws
+source /edx/app/edxapp/edxapp_env
+cd edx/app/edxapp/edx-platform/
+paver update_assets cms --settings=aws
+exit
+source /edx/app/edxapp/edxapp_env
+./manage.py lms migrate --database=student_module_history --settings=aws
+exit
+python manage.py shell
+cd edx-platform/
+python manage.py shell
+source /edx/app/edxapp/edxapp_env
+python manage.py shell
+exit
+python manage.py cms
+source /edx/app/edxapp/edxapp_env
+python manage.py cms
+python manage.py lms
+python manage.py createsuperuser
+exit
+ImportError: No module named safe_lxml
+python manage.py createsuperuser
+source /edx/app/edxapp/edxapp_env
+python manage.py createsuperuser
+python ./manage.py shell
+exit
+source /edx/app/edxapp/edxapp_env
+ ./manage.py lms shell
+./manage.py lms createsuperuser
+./manage.py lms shell
+./manage.py lms createsuperuser
+./manage.py lms shell
 exit

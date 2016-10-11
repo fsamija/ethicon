@@ -68,7 +68,16 @@
             "PASSWORD": "password", 
             "PORT": "3306", 
             "USER": "edxapp001"
+        },
+        "student_module_history": {
+            "ENGINE": "django.db.backends.mysql",
+            "HOST": "localhost",
+            "NAME": "edxapp_csmh",
+            "PASSWORD": "password",
+            "PORT": "3306",
+            "USER": "edxapp001"
         }
+
     }, 
     "DEFAULT_FILE_STORAGE": "django.core.files.storage.FileSystemStorage", 
     "DJFS": {
@@ -190,7 +199,7 @@
         }, 
         "url": "http://localhost:18040"
     }, 
-    "YOUTUBE_API_KEY": "AIzaSyDVuonsae9IaTGW1K_pxvDw1clPoRiLhlY", 
+    "YOUTUBE_API_KEY": "AIzaSyAtWeWSstUMeFQUwAJevk04do2AUN0wUDI", 
     "ZENDESK_API_KEY": "", 
     "ZENDESK_USER": ""
 }
